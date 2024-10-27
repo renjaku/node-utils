@@ -1,0 +1,21 @@
+{
+  "name": "@renjaku/utils",
+  "version": "1.0.3",
+  "description": "Renjaku Utilities",
+  "author": "Renjaku Inc.",
+  "license": "ISC",
+  "files": [
+    "dist"
+  ],
+  "main": "dist/index.js",
+  "devDependencies": {
+    "@types/node": "^22.7.8",
+    "typescript": "^5.6.3"
+  },
+  "scripts": {
+    "clean": "node -e \"const fs = require('fs'); const path = require('path'); const dir = 'dist'; if (!fs.existsSync(dir)) process.exit(0); fs.readdirSync(dir).forEach(file => { const filePath = path.join(dir, file); fs.statSync(filePath).isDirectory() ? fs.rmSync(filePath, { recursive: true }) : fs.unlinkSync(filePath); }); console.log('Cleared dist directory');\"",
+    "build": "npx tsc -d",
+    "test": "npx ts-node test.ts",
+    "prepare": "npm run clean && npm run build"
+  }
+}
