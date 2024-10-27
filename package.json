@@ -1,9 +1,13 @@
 {
   "name": "@renjaku/utils",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Renjaku Utilities",
   "author": "Renjaku Inc.",
   "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/renjaku/node-utils.git"
+  },
   "files": [
     "dist"
   ],
